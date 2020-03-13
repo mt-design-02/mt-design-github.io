@@ -1,17 +1,19 @@
-<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="utf-8">
     <meta name="description" content="ポートフォリオサイトです">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Sawarabi+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
+    <script src="header_scroll.js" defer></script>
+    <script src="pricecalc.js" defer></script>
     <title>ポートフォリオテストページ|フクシア</title>
 </head>
 <body>
 
 <div class="container">
-    <header class="header">
+    <header id="header" class="header">
         <div class="header-wrap">
             <h1 class="h1">ベーシックなページを作る</h1>
             <nav class="gnavi">
@@ -26,10 +28,139 @@
         </div>
     </header>
     <main class="main">
-        <img src="img/gohan.jpg" alt="朝食" class="main-img">
+        <div class="main-img-wrap">
+            <img src="img/gohan.jpg" alt="朝食" class="main-img">
+            <div class="lead-txt-wrap">
+                <p class="main-lead-txt">美味しいご飯を<br>たくさん食べたい、作りたい。</p>
+                <p class="sub-lead-txt">大自然の中で食べる新鮮なご飯を体験してみませんか</p>
+            </div>
+        </div>
+        
+        <section class="contents-profile">
+            <div class="ly_titleWrap">
+                <h2 class="contents-title">このサイトについて</h2>
+            </div><!--ly_titleWrap-->
+            <p class="contents-lead-txt">このサイトはテストサイトですので、適当なことを書いています。</p>
+            
+            <ul class="flex-row-wrap">
+                <li class="flex-row-list">
+                    <dl>
+                        <dt><img src="img/wood.jpg" alt="焚き火準備" class="list-img"></dt>
+                        <dd class="lead-txt-wrap">キャンプでファイヤーしたり</dd>
+                    </dl>
+                </li>
+                <li class="flex-row-list">
+                    <dl>
+                        <dt><img src="img/meat.jpg" alt="お肉" class="list-img"></dt>
+                        <dd class="lead-txt-wrap">お肉を焼いたり</dd>
+                    </dl>
+                </li>
+                <li class="flex-row-list">
+                    <dl>
+                        <dt><img src="img/morning.jpg" alt="朝の風景" class="list-img"></dt>
+                        <dd class="lead-txt-wrap">自然の中でのんびりします</dd>
+                    </dl>
+                </li>
+            </ul>
+        </section>
+        <section class="ly-section bgYellow">
+            <div class="ly-section-block">
+                <div class="ly_titleWrap">
+                    <h2 class="contents-title">料金表</h2>
+                </div><!--ly_titleWrap-->
+                <table class="priceTable">
+                    <thead class="thead">
+                        <tr>
+                            <th>&ensp;</th>
+                            <th>大人(中学生以上)</th>
+                            <th>子供</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                        <tr>
+                            <th>テント料金</th>
+                            <td class="adultPrice">
+                                <span class="tentPrice"></span>円<span class="smallText">/1泊</span>
+                            </td>
+                            <td>1,100<span class="smallText">/1泊</span></td>
+                        </tr>
+                        <tr>
+                            <th>保証金</th>
+                            <td class="adultPrice">
+                                <span class="hosyouPrice"></span>円
+                            </td>
+                            <td>100円</td>
+                        </tr>
+                        <tr>
+                            <th>貸し出し料金</th>
+                            <td class="adultPrice">
+                                <span class="kashiPrice"></span>円
+                            </td>
+                            <td>2,000円</td>
+                        </tr>
+                        <tr>
+                            <th>合計</th>
+                            <td class="adultPrice">
+                                <span class="totalPrice"></span>円
+                            </td>
+                            <td class="totalChild">
+                            <span></span>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!--ly-section-block-->
+        </section>
+        <section class="ly_fullScreen">
+            <div class="ly-section">
+                <div class="bl_mediaHalf-lrPos">
+                    <h2 class="contents-title">キャンプの醍醐味</h2>
+                    <div class="bl_media">
+                        <h3 class="bl_media_title">自然の中でリフレッシュ</h3>
+                        <div class="bl_media_textWrapper">
+                            <p class="bl_media_text">現代人は常に忙しく、それだけでストレスに常にさらされています。</p>
+                            <p class="bl_media_text">日頃の疲れを癒すために自然に囲まれ新鮮な空気を満喫できるキャンプがオススメです。</p>
+                        </div>
+                    </div>
+                </div><!--bl_mediaHalf-lrPos-->
+            </div><!--ly-section-->
+            <!--
+                     <dl class="bl_media reverse">
+                    <dt class="bl_media_imgWrap">
+                        <img src="img/pan-meat.JPG" alt="パンとお肉">
+                    </dt>
+                    <dd class="bl_media_contentsWrap">
+                        <h3 class="bl_media_title">火を育てて肉を焼く美味しさ</h3>
+                        <div class="bl_media_textWrapper">
+                            <p class="bl_media_text">薪から火を起こしじっくり育てた火で焼くお肉は格別です。</p>
+                            <p class="bl_media_text">時間を気にせずのんびりゆっくりご飯を味わうのもキャンプの楽しみです。</p>
+                        </div>
+                    </dd>
+                </dl>
+-->
+        </section><!--ly_fullScreen//-->
+        <section class="ly_fullScreen reverse">
+            <div class="ly-section">
+                <div class="bl_mediaHalf-lrPos">
+                    <h2 class="contents-title"></h2>
+                    <div class="bl_media">
+                        <h3 class="bl_media_title">火を育てて肉を焼く美味しさ</h3>
+                        <div class="bl_media_textWrapper">
+                            <p class="bl_media_text">薪から火を起こしじっくり育てた火で焼くお肉は格別です。</p>
+                            <p class="bl_media_text">時間を気にせずのんびりゆっくりご飯を味わうのもキャンプの楽しみです。</p>
+                        </div>
+                    </div>
+                </div><!--bl_mediaHalf-lrPos-->
+            </div><!--ly-section-->
+        </section><!--ly_fullScreen//-->        
         
     </main>
     
+    
+    <div class="btn_toTop">
+        <a href="#" onclick="toTop">TOPへ</a>
+    </div> 
     
     <footer class="footer">
         <small class="copyright">&copy;&ensp;2019&ensp;fuchsia-lain.work</small>
