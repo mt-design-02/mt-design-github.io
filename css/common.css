@@ -31,7 +31,7 @@ footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
-nav ul {
+ul {
     list-style:none;
 }
 
@@ -69,12 +69,21 @@ input, select {
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+}
+
+
 /*以下個別設定*/
 /*-------------------
 ヘッダー
 --------------------*/
 html {
     font-size: 62.5%;
+    position: relative;
+}
+body {
+    font-family: "Sawarabi Gothic";
 }
 
 .container {
@@ -83,19 +92,32 @@ html {
 }
 
 .header {
-    width: 980px;
-    display: block;
-    margin: 0 auto;
+    width: 100vw;
     padding: 16px 24px;
-    background: #fff;
-    
+    background: rgba(0,0,0,0.7);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:999;
 }
 
 .header-wrap {
+    width: 980px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+}
+
+.header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
 }
 
 /*h1*/
@@ -103,6 +125,7 @@ html {
     font-size: 1.8rem;
     font-weight: bold;
     font-family: 'Sawarabi Gothic', sans-serif;
+    color: #fff;
 }
 
 /*gnavi*/
@@ -120,7 +143,7 @@ html {
     margin-left: 8px;
     padding: 8px 16px;
     font-size: 1.8rem;
-    color: #333;
+    color: #fff;
 }
 
 .navi-wrap .navi-link:hover {
@@ -129,13 +152,257 @@ html {
 
 
 /*------------------------
+全体調整
+--------------------------*/
+.ly-section {
+    display: block;
+    width: 100vw;
+    padding: 48px 0;
+    margin: 0 auto;
+}
+.ly-section-block {
+    width: 96%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/*------------------------
 メイン画像
 --------------------------*/
 .main {
-    width: 100%;
+    width: 100vw;
 }
 
-.main .main
+/*包括div*/
+.main .main-img-wrap {
+    width: 100%;
+    height: 560px;
+    position: relative;
+}
+
+/*メイン画像そのもの*/
+.main .main-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-img-wrap .lead-txt-wrap {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    z-index: 2;
+    background: rgba(255,255,255,0.8);   
+}
+.main-img-wrap .main-lead-txt {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.4;
+}
+.main-img-wrap .sub-lead-txt {
+    font-size: 1.4rem;
+    color: #333;
+    line-height: 1.2;
+    margin: 8px 0;
+}
+
+
+.footer {
+    width: 100vw;
+    background: #111;
+    text-align: center;
+    color: #fff;
+    padding: 24px 0;
+}
+
+
+/*-----------------------
+共通設定
+------------------------*/
+.flex-row-wrap {/*ul*/
+    width: 70%;
+    margin: 32px auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+/*3つ横並び*/
+.flex-row-wrap {/*li*/
+    
+}
+
+/*section内の見出し余白調整*/
+.ly_titleWrap {
+    margin-bottom: 48px;
+}
+
+/*-----------------------
+プロフィール要素部分
+------------------------*/
+.contents-profile {
+    width: 100vw;
+    display: block;
+    background: #fff;
+    padding: 48px 0;
+    margin: 0 auto;
+}
+
+.contents-title {
+    font-size: 2.1rem;
+    font-weight: bold;
+    text-align: center;
+}
+.contents-lead-txt {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 32px;
+}
+
+
+
+/*-----------------------
+コンテンツのflexのlist
+------------------------*/
+.list-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.flex-row-list .lead-txt-wrap {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 16px;
+}
+
+/*-----------------------
+料金表セクション
+------------------------*/
+.ly-section.bgYellow {
+    background: #f6f7e5;
+}
+
+.priceTable {
+    width: 80%;
+    display: table;
+    table-layout: fixed;
+    margin: 48px auto 0 auto;
+    border-collapse: separate;
+    border-spacing: 4px 2px;
+    font-size: 1.8rem;
+}
+
+.priceTable .thead tr th {
+    background: #ccc;
+    padding: 8px 0;
+    text-align: center;
+}
+.priceTable .thead tr th:first-child {
+    background: transparent;
+}
+.priceTable .tbody {
+    text-align: center;
+}
+
+
+.priceTable .tbody th {
+    background: #f3d56b;
+    padding: 12px 0;
+}
+
+.priceTable .smallText {
+    font-size: 1.2rem;
+}
+
+/*-----------------------
+画像とテキストのメディア(全体表示)
+------------------------*/
+.ly_fullScreen {
+    background: url(../img/forest.jpg);
+    background-size: cover;
+    height: 400px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.ly_fullScreen.reverse {
+    background: url(../img/pan-meat.JPG);  
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*positionをいじるmedia*/
+.bl_mediaHalf-lrPos {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+.ly_fullScreen.reverse .bl_mediaHalf-lrPos {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    left: auto;
+}
+
+.bl_mediaHalf-lrPos .bl_media {
+    margin-top: 80px;   
+}
+
+.bl_mediaHalf-lrPos .contents-title {
+    color: #fff;
+    font-size:  3rem;
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+}
+
+.bl_media_textWrapper {
+    margin-top: 16px;
+}
+.ly_fullScreen.reverse .bl_media_textWrapper {
+    text-align: right;
+}
+
+.bl_mediaHalf-lrPos .bl_media_title {
+    color: #fff;
+    font-size: 2.1rem;
+}
+.ly_fullScreen.reverse .bl_mediaHalf-lrPos .bl_media_title {
+    text-align: right;
+}
+.bl_mediaHalf-lrPos .bl_media_text {
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1.8;
+}
+
+
+/*-----------------------
+TOPに戻るボタン
+------------------------*/
+.btn_toTop {
+    position: fixed;
+    right: 5%;
+    bottom: 30px;
+    background: #111;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 12px 0 24px 0;
+    text-align: center;
+    line-height:  25px;
+}
+.btn_toTop a{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
 
 
 
@@ -143,16 +410,7 @@ html {
 
 
 
-
-
-
-
-
-
-
-
-
-
+/**/
 
 
 
