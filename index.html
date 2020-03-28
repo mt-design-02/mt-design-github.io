@@ -5,161 +5,164 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Sawarabi+Gothic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
-    <link rel="stylesheet" href="css/common.css">
-    <script src="header_scroll.js" defer></script>
-     <script src="totop_scroll.js" defer></script>
-    <script src="pricecalc.js" defer></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/header_scroll.js" defer></script>
+     <script src="js/totop_scroll.js" defer></script>
+    <script src="js/pricecalc.js" defer></script>
+    <script src="js/slide_img.js" defer></script>
     
     <title>ポートフォリオテストページ|フクシア</title>
 </head>
 <body>
-
-<div class="container">
-    <header id="header" class="header">
-        <div class="header-wrap">
-            <h1 class="h1">ベーシックなページを作る</h1>
-            <nav class="gnavi">
-                <ul class="navi-wrap">
-                    <li><a href="#" class="navi-link">Top</a></li>
-                    <li><a href="#" class="navi-link">About</a></li>
-                    <li><a href="#" class="navi-link">Twitter App</a></li>
-                    <li><a href="#" class="navi-link">Blog</a></li>
-                    <li><a href="#" class="navi-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="main">
-        <div class="main-img-wrap">
-            <img src="img/gohan.jpg" alt="朝食" class="main-img">
-            <div class="lead-txt-wrap">
-                <p class="main-lead-txt">美味しいご飯を<br>たくさん食べたい、作りたい。</p>
-                <p class="sub-lead-txt">大自然の中で食べる新鮮なご飯を体験してみませんか</p>
-            </div>
-        </div>
-        
-        <section class="contents-profile">
-            <div class="ly_titleWrap">
-                <h2 class="contents-title">このサイトについて</h2>
-            </div><!--ly_titleWrap-->
-            <p class="contents-lead-txt">このサイトはテストサイトですので、適当なことを書いています。</p>
-            
-            <ul class="flex-row-wrap">
-                <li class="flex-row-list">
-                    <dl>
-                        <dt><img src="img/wood.jpg" alt="焚き火準備" class="list-img"></dt>
-                        <dd class="lead-txt-wrap">キャンプでファイヤーしたり</dd>
-                    </dl>
-                </li>
-                <li class="flex-row-list">
-                    <dl>
-                        <dt><img src="img/meat.jpg" alt="お肉" class="list-img"></dt>
-                        <dd class="lead-txt-wrap">お肉を焼いたり</dd>
-                    </dl>
-                </li>
-                <li class="flex-row-list">
-                    <dl>
-                        <dt><img src="img/morning.jpg" alt="朝の風景" class="list-img"></dt>
-                        <dd class="lead-txt-wrap">自然の中でのんびりします</dd>
-                    </dl>
-                </li>
+<!--ヘッダー-->
+<div class="ly_header">
+<header id="header" class="bl_header">
+    <div class="bl_header_inner">
+        <h1 class="lv1_heading">ベーシックなページを作る</h1>
+        <nav class="bl_gnavi">
+            <ul class="bl_gnavi_inner">
+                <li><a href="#" class="navi-link">Top</a></li>
+                <li><a href="#" class="navi-link">About</a></li>
+                <li><a href="#" class="navi-link">Twitter App</a></li>
+                <li><a href="#" class="navi-link">Blog</a></li>
+                <li><a href="#" class="navi-link">Contact</a></li>
             </ul>
-        </section>
-        <section class="ly-section bgYellow">
-            <div class="ly-section-block">
-                <div class="ly_titleWrap">
-                    <h2 class="contents-title">料金表</h2>
-                </div><!--ly_titleWrap-->
-                <table class="priceTable">
-                    <thead class="thead">
-                        <tr>
-                            <th>&ensp;</th>
-                            <th>大人(中学生以上)</th>
-                            <th>子供</th>
-                        </tr>
-                    </thead>
-                    <tbody class="tbody">
-                        <tr>
-                            <th>テント料金</th>
-                            <td class="adultPrice">
-                                <span class="tentPrice"></span>円<span class="smallText">/1泊</span>
-                            </td>
-                            <td>1,100<span class="smallText">/1泊</span></td>
-                        </tr>
-                        <tr>
-                            <th>保証金</th>
-                            <td class="adultPrice">
-                                <span class="hosyouPrice"></span>円
-                            </td>
-                            <td>100円</td>
-                        </tr>
-                        <tr>
-                            <th>貸し出し料金</th>
-                            <td class="adultPrice">
-                                <span class="kashiPrice"></span>円
-                            </td>
-                            <td>2,000円</td>
-                        </tr>
-                        <tr>
-                            <th>合計</th>
-                            <td class="adultPrice">
-                                <span class="totalPrice"></span>円
-                            </td>
-                            <td class="totalChild">
-                            <span></span>
-                            </td>
-                            
-                        </tr>
-                    </tbody>
-                </table>
-            </div><!--ly-section-block-->
-        </section>
-        <section class="ly_fullScreen">
-            <div class="ly-section">
-                <div class="bl_mediaHalf-lrPos">
-                    <h2 class="contents-title">キャンプの醍醐味</h2>
-                    <div class="bl_media">
-                        <h3 class="bl_media_title">自然の中でリフレッシュ</h3>
-                        <div class="bl_media_textWrapper">
-                            <p class="bl_media_text">現代人は常に忙しく、それだけでストレスに常にさらされています。</p>
-                            <p class="bl_media_text">日頃の疲れを癒すために自然に囲まれ新鮮な空気を満喫できるキャンプがオススメです。</p>
-                        </div>
-                    </div>
-                </div><!--bl_mediaHalf-lrPos-->
-            </div><!--ly-section-->
-
-        </section><!--ly_fullScreen//-->
-        <section class="ly_fullScreen reverse">
-            <div class="ly-section">
-                <div class="bl_mediaHalf-lrPos">
-                    <h2 class="contents-title"></h2>
-                    <div class="bl_media">
-                        <h3 class="bl_media_title">火を育てて肉を焼く美味しさ</h3>
-                        <div class="bl_media_textWrapper">
-                            <p class="bl_media_text">薪から火を起こしじっくり育てた火で焼くお肉は格別です。</p>
-                            <p class="bl_media_text">時間を気にせずのんびりゆっくりご飯を味わうのもキャンプの楽しみです。</p>
-                        </div>
-                    </div>
-                </div><!--bl_mediaHalf-lrPos-->
-            </div><!--ly-section-->
-        </section><!--ly_fullScreen//-->        
+        </nav>
+    </div><!--bl_headerInner//-->
+</header>
+</div><!--ly_header//-->
+<div class="ly_cont_main">
+    <main>
+        <section class="bl_mv_inner">
+            <!--数秒おきにメインの画像をスライドさせる-->
+            <ul class="bl_mv_slideBody">
+                <li class="current"><img src="img/gohan.jpg" alt="朝食" class="main-img"></li>
+                <li><img src="img/pan-meat.JPG" alt="パンとお肉" class="main-img"></li>
+                <li><img src="img/pan-meat.JPG" alt="パンとお肉" class="main-img"></li>
+            </ul>
+            <div class="bl_lead_body">
+                <h2 class="bl_lead_text">大自然の中で、美味しいものを<br>たくさん食べたい、作りたい。</h2>
+                <p class="bl_lead_subText">大自然の中で食べる新鮮なご飯を体験してみませんか</p>
+            </div><!--bl_lead_body//-->
+        </section><!---bl_mv_inner//-->
         
+        <div class="ly_cont_section">
+            <section class="bl_profile">
+                <h2 class="lv2_heading">このサイトについて</h2>
+                <p class="el_subLead_text">都心から車で1時間以内の大自然・かずさの森で<br>キャンプ・アウトドアはいかがですか？(仮)</p>
+
+                <ul class="bl_profile_body">
+                    <li class="bl_profile_list">
+                        <dl>
+                            <dt><img src="img/wood.jpg" alt="焚き火準備"></dt>
+                            <dd class="bl_profile_text">キャンプでファイヤーしたり</dd>
+                        </dl>
+                    </li>
+                    <li class="bl_profile_list">
+                        <dl>
+                            <dt><img src="img/meat.jpg" alt="お肉"></dt>
+                            <dd class="bl_profile_text">お肉を焼いたり</dd>
+                        </dl>
+                    </li>
+                    <li class="bl_profile_list">
+                        <dl>
+                            <dt><img src="img/morning.jpg" alt="朝の風景"></dt>
+                            <dd class="bl_profile_text">自然の中でのんびりします</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </section>
+        </div><!--ly_cont_section//-->
+        <div class="ly_cont_section ly_cont_section__bgYellow">    
+            <section class="bl_priceTable">
+                <h2 class="lv2_heading">料金表</h2>
+                <div class="ly_priceTable">
+                    <table class="bl_priceTable_body">
+                        <thead class="thead">
+                            <tr>
+                                <th>&ensp;</th>
+                                <th>大人(中学生以上)</th>
+                                <th>子供</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <th>テント料金</th>
+                                <td class="adultPrice">
+                                    <span class="tentPrice"></span>円<span class="smallText">/1泊</span>
+                                </td>
+                                <td>1,100<span class="smallText">/1泊</span></td>
+                            </tr>
+                            <tr>
+                                <th>保証金</th>
+                                <td class="adultPrice">
+                                    <span class="hosyouPrice"></span>円
+                                </td>
+                                <td>100円</td>
+                            </tr>
+                            <tr>
+                                <th>貸し出し料金</th>
+                                <td class="adultPrice">
+                                    <span class="kashiPrice"></span>円
+                                </td>
+                                <td>2,000円</td>
+                            </tr>
+                            <tr>
+                                <th>合計</th>
+                                <td class="adultPrice">
+                                    <span class="totalPrice"></span>円
+                                </td>
+                                <td class="totalChild">
+                                <span></span>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!--ly_priceTable-->
+            </section>
+        </div><!--ly_cont_section-->
+        
+        <div class="ly_cont_section ly_cont_section__full">      
+            <section class="bl_fullScreen">
+                <div class="bl_fullScreen-inner">
+                    <h2 class="bl_fullScreen_title">キャンプの醍醐味</h2>
+                    <div class="bl_lead_body">
+                        <h3 class="bl_lead_title">自然の中でリフレッシュ</h3>
+                        <div class="bl_lead_textWrapper">
+                            <p class="bl_lead_text">現代人は常に忙しく、それだけでストレスに常にさらされています。</p>
+                            <p class="bl_lead_text">日頃の疲れを癒すために自然に囲まれ新鮮な空気を満喫できるキャンプがオススメです。</p>
+                        </div><!--bl_lead_textWrapper//-->
+                    </div><!--bl_lead_body//-->
+                </div><!--bl_fullScreen-inner-->
+            </section><!--ly_fullScreen//-->
+         </div><!--ly_cont_section-->       
+      
+        <div class="ly_cont_section ly_cont_section__full">      
+            <section class="bl_fullScreen bl_fullScreen__reverse">
+                <div class="bl_fullScreen-inner">
+                    <div class="bl_lead_body">
+                        <h3 class="bl_lead_title">火を育てて肉を焼く美味しさ</h3>
+                        <div class="bl_lead_textWrapper">
+                            <p class="bl_lead_text">薪から火を起こしじっくり育てた火で焼くお肉は格別です。</p>
+                            <p class="bl_lead_text">時間を気にせずのんびりゆっくりご飯を味わうのもキャンプの楽しみです。</p>
+                        </div><!--bl_lead_textWrapper//-->
+                    </div><!--bl_lead_body//-->
+                </div><!--bl_fullScreen-inner//-->
+            </section><!--ly_fullScreen//-->        
+        </div><!--ly_cont_section--> 
     </main>
-    
-    
-    <div class="btn_toTop">
-        <a href="javascript:void(0);" onclick="toTop()">TOPへ</a>
+    <div class="el_btn_toTop">
+        <a href="javascript:void(0);" onclick="toTop()"><i class="fas fa-arrow-up"></i></a>
     </div> 
     
-    <footer class="footer">
-        <small class="copyright">&copy;&ensp;2019&ensp;fuchsia-lain.work</small>
-    </footer>
-
-
-
-
-</div>
-    
-    
+    <div class="ly_footer">
+        <footer class="bl_footer">
+            <small class="copyright">&copy;&ensp;fuchsia-lain.work</small>
+        </footer>
+    </div><!--ly_footer//-->
+</div><!--ly_cont_main//-->
 </body>    
 </html>
